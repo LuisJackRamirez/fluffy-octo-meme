@@ -1,0 +1,39 @@
+#include <bits/stdc++.h>
+using namespace std;
+int
+main (void)
+{
+	  int a = 0;
+	    int n = 0;
+	      int m = 0;
+	        int costs[2] = {0, 0};
+
+		  set <int> seats;
+
+		    cin >> n >> m;
+
+		      for (int i = 0; i < m; i++)
+			          {
+					        cin >> a;
+						      seats.insert (a);
+						          }
+
+		        getCosts (costs, seats, n);
+
+			  cout << costs[0] << costs[1];
+
+			    return 0;
+}
+
+void
+getCosts (int costs[2], set <int> &seats, int n)
+{
+	  int a = 0;
+	    
+	    while (n--)
+		        {
+				      a = seats.begin () + seats.size () - 1;
+				            costs[0] = costs[0] + a;
+					          
+					        }   
+}
